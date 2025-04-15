@@ -15,7 +15,7 @@ const [filteredEmployees, setfilteredEmployees] = useState([])
         setEmpLoading(true);
         try {
           const response = await axios.get(
-            "http://localhost:5000/api/employees",
+            "https://employee-api-nu.vercel.app/api/employees",
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -35,7 +35,7 @@ const [filteredEmployees, setfilteredEmployees] = useState([])
                 <img
                   width={40}
                   className="rounded-full"
-                  src={`http://localhost:5000/${emp.userId.profileImage}`}
+                  src={`"https://employee-api-nu.vercel.app/${emp.userId.profileImage}`}
                 />
               ),
               action: <EmployeeButtons id={emp._id} />, // Pass the delete handler to buttons
