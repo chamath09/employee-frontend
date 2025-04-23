@@ -49,7 +49,7 @@ const EditDepartment = () => {
       e.preventDefault();
       try {
         const response = await axios.put(
-          `https://employee-api-nu.vercel.app/api/departments/${id}`,
+          `http://localhost:5000/api/departments/${id}`,
           department,
           {
             headers: {

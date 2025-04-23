@@ -20,7 +20,7 @@ const Edit = () => {
       try {
         const [departmentsData, employeeRes] = await Promise.all([
           fetchDepartments(),
-          axios.get(`https://employee-api-nu.vercel.app/api/employees/${id}`, {
+          axios.get(`http://localhost:5000/api/employees/${id}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -72,7 +72,7 @@ const Edit = () => {
 
    try {
      const response = await axios.put(
-       `https://employee-api-nu.vercel.app/api/employees/${id}`,
+       `http://localhost:5000/api/employees/${id}`,
        updatedData,
        {
          headers: {

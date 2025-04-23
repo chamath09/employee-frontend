@@ -31,14 +31,14 @@ const Settings = () => {
         } else {
             try {
                 const response = await axios.put(
-                  "https://employee-api-nu.vercel.app/api/setting/change-password",
-                  settings,
-                  {
-                    headers: {
-                      Authorization: `Bearer ${localStorage.getItem("token")}`,
-                    },
-                  }
-                );
+  'http://localhost:5000/api/setting/change-password', 
+  settings,
+  {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+  }
+);
 
                 
                 if (response.data.success) {

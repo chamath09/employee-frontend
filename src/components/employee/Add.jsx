@@ -42,7 +42,7 @@ const Add = () => {
 
     try {
       const response = await axios.post(
-        "https://employee-api-nu.vercel.app/api/employees/add",
+        "http://localhost:5000/api/employees/add",
         formDataObj,
         {
           headers: {

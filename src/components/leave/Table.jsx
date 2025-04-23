@@ -11,14 +11,11 @@ const Table = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get(
-        "https://employee-api-nu.vercel.app/api/leave",
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
+      const response = await axios.get("http://localhost:5000/api/leave", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
 
       if (response.data.success) {
         let sno = 1;
