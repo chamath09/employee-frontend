@@ -11,7 +11,7 @@ const View = () => {
             
             try {
               const response = await axios.get(
-                `http://localhost:5000/api/employees/${id}`,
+                `"https://employee-api-nu.vercel.app/api/employees/${id}`,
                 {
                   headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
